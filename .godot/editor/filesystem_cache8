@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727678929
+::res://::1727705159
 icon.svg::CompressedTexture2D::5992715322244852234::1727669573::1727676205::1::::<><>::
 README.md::TextFile::-1::1727675999::0::1::::<><>::
 ::res://Art/::1727669594
@@ -38,9 +38,9 @@ Tilled_Dirt_Wide_v2.png::CompressedTexture2D::1885065432247479972::1719670184::1
 Water.png::CompressedTexture2D::1638928247599251165::1640131722::1727676205::1::::<><>::
 Wooden_House_Roof_Tilset.png::CompressedTexture2D::397493002096454715::1721544444::1727676205::1::::<><>::
 Wooden_House_Walls_Tilset.png::CompressedTexture2D::1043406821780830785::1721116988::1727676205::1::::<><>::
-::res://Characters/::1727678919
-player.gd::GDScript::-1::1727678919::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::253594363972871203::1727678950::0::1::::<><>::res://Characters/player.gd<>uid://bjwyj2dfwx7jf::::res://Art/Characters/Basic Charakter Spritesheet.png
-::res://Level/::1727678919
-game_level.tscn::PackedScene::3039244322149747623::1727678919::0::1::::<><>::uid://du3wroeggaat::::res://Characters/player.tscn
-::res://Scripts/::1727678929
+::res://Characters/::1727682290
+player.tscn::PackedScene::253594363972871203::1727682290::0::1::::<><>::res://Scripts/player.gd<>uid://bjwyj2dfwx7jf::::res://Art/Characters/Basic Charakter Spritesheet.png
+::res://Level/::1727682290
+game_level.tscn::PackedScene::3039244322149747623::1727682290::0::1::::<><>::uid://du3wroeggaat::::res://Characters/player.tscn
+::res://Scripts/::1727682154
+player.gd::GDScript::-1::1727682154::0::1::::<>CharacterBody2D<>::

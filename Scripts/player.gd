@@ -1,10 +1,10 @@
 extends CharacterBody2D
 
 var speed = 100
-var player_state
-var player_direction
+var player_state = "idle"
+var player_direction = "down"
 
-@warning_ignore("unused_parameter")
+
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down");
 	
@@ -28,7 +28,7 @@ func _physics_process(delta):
 
 	play_animation(direction)
 
-@warning_ignore("unused_parameter")
+
 func play_animation(direction):
 	match player_state:
 		"idle":
