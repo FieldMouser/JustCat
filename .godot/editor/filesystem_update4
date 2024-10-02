@@ -1,2 +1,8 @@
 res://Level/game_level.tscn
 res://Characters/player.tscn
+res://apple_tree.gd
+res://Characters/apple_tree.tscn
+res://Scripts/apple_tree.gd
+res://Scripts/player.gd
+res://Characters/apple_collectable.tscn
+res://Scripts/apple_collectable.gd

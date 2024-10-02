@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://ca061ecfv7yx1"]
+
+[ext_resource type="Script" path="res://Scripts/apple_collectable.gd" id="1_2odhi"]
+[ext_resource type="Texture2D" uid="uid://c27eef4gl4r37" path="res://Art/Objects/Basic_Grass_Biom_things.png" id="1_yh5d2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjt6w"]
+atlas = ExtResource("1_yh5d2")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5a3ns"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjt6w")
+}],
+"loop": true,
+"name": &"apple",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_38730"]
+resource_name = "falling_from_tree"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.166667, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-3, -8), Vector2(-8, -15), Vector2(-15, -8), Vector2(-15, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_leok7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_q3dtc"]
+resource_name = "fade"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vwtin"]
+_data = {
+"RESET": SubResource("Animation_leok7"),
+"fade": SubResource("Animation_q3dtc"),
+"falling_from_tree": SubResource("Animation_38730")
+}
+
+[node name="apple_collectable" type="StaticBody2D"]
+script = ExtResource("1_2odhi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5625, 0.5625)
+sprite_frames = SubResource("SpriteFrames_5a3ns")
+animation = &"apple"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vwtin")
+}

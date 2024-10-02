@@ -1,4 +1,10 @@
-TileMap
-CollisionShape2D
+AnimationPlayer
 AnimatedSprite2D
+TileMap
+Sprite2D
+StaticBody2D
+Marker2D
+Timer
+CollisionShape2D
+Area2D
 CharacterBody2D

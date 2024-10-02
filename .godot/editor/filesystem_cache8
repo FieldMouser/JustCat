@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1727705159
+::res://::1727864773
 icon.svg::CompressedTexture2D::5992715322244852234::1727669573::1727676205::1::::<><>::
 README.md::TextFile::-1::1727675999::0::1::::<><>::
 ::res://Art/::1727669594
@@ -38,9 +38,13 @@ Tilled_Dirt_Wide_v2.png::CompressedTexture2D::1885065432247479972::1719670184::1
 Water.png::CompressedTexture2D::1638928247599251165::1640131722::1727676205::1::::<><>::
 Wooden_House_Roof_Tilset.png::CompressedTexture2D::397493002096454715::1721544444::1727676205::1::::<><>::
 Wooden_House_Walls_Tilset.png::CompressedTexture2D::1043406821780830785::1721116988::1727676205::1::::<><>::
-::res://Characters/::1727682290
-player.tscn::PackedScene::253594363972871203::1727682290::0::1::::<><>::res://Scripts/player.gd<>uid://bjwyj2dfwx7jf::::res://Art/Characters/Basic Charakter Spritesheet.png
-::res://Level/::1727682290
-game_level.tscn::PackedScene::3039244322149747623::1727682290::0::1::::<><>::uid://du3wroeggaat::::res://Characters/player.tscn
-::res://Scripts/::1727682154
-player.gd::GDScript::-1::1727682154::0::1::::<>CharacterBody2D<>::
+::res://Characters/::1727866123
+apple_collectable.tscn::PackedScene::4826379682094520056::1727866325::0::1::::<><>::uid://c27eef4gl4r37::::res://Art/Objects/Basic_Grass_Biom_things.png
+apple_tree.tscn::PackedScene::4561660464344097607::1727865469::0::1::::<><>::res://Scripts/apple_tree.gd<>uid://c27eef4gl4r37::::res://Art/Objects/Basic_Grass_Biom_things.png
+player.tscn::PackedScene::253594363972871203::1727865469::0::1::::<><>::res://Scripts/player.gd<>uid://bjwyj2dfwx7jf::::res://Art/Characters/Basic Charakter Spritesheet.png
+apple_collectable.gd::GDScript::-1::1727866329::0::1::::<>StaticBody2D<>::
+::res://Level/::1727865469
+game_level.tscn::PackedScene::3039244322149747623::1727865469::0::1::::<><>::uid://du3wroeggaat::::res://Characters/player.tscn<>uid://c0hb5pl56qi85::::res://Art/Tilesets/Hills.png<>uid://dpkrhxeeo15pu::::res://Art/Tilesets/Grass.png<>uid://b58x474156q6r::::res://Characters/apple_tree.tscn
+::res://Scripts/::1727865463
+apple_tree.gd::GDScript::-1::1727865463::0::1::::<>Node2D<>::
+player.gd::GDScript::-1::1727862130::0::1::::<>CharacterBody2D<>::

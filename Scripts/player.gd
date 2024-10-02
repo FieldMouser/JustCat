@@ -5,6 +5,9 @@ var player_state = "idle"
 var player_direction = "down"
 
 
+func player(): # Просто метод игрока, нужен для взаимодействия с объектами
+	pass
+
 func _physics_process(delta):
 	var direction = Input.get_vector("left", "right", "up", "down");
 	
