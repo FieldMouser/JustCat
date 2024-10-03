@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://2wlc12g3o7ya"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_re6hh"]
-[ext_resource type="FontFile" uid="uid://cufpjpj1j1gbu" path="res://pixelFont-7-8x14-sproutLands.ttf" id="2_vj4sa"]
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_re6hh"]
+[ext_resource type="FontFile" uid="uid://cufpjpj1j1gbu" path="res://Art/pixelFont-7-8x14-sproutLands.ttf" id="2_vj4sa"]
 [ext_resource type="Texture2D" uid="uid://dwh265gm6xhlo" path="res://Art/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box big.png" id="3_nqgev"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fy1rs"]
