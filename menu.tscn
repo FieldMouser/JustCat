@@ -1,0 +1,79 @@
+[gd_scene load_steps=13 format=3 uid="uid://2wlc12g3o7ya"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_re6hh"]
+[ext_resource type="FontFile" uid="uid://cufpjpj1j1gbu" path="res://pixelFont-7-8x14-sproutLands.ttf" id="2_vj4sa"]
+[ext_resource type="Texture2D" uid="uid://dwh265gm6xhlo" path="res://Art/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box big.png" id="3_nqgev"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fy1rs"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.301961, 0.572549, 0.376471, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi55l"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.324117, 0.772617, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hsnsm"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.413833, 0.989291, 7.70092e-07, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i1en5"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.301961, 0.572549, 0.376471, 1)
+
+[sub_resource type="GDScript" id="GDScript_h1mnx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i780i"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.788235, 0.345098, 0.423529, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lg2vm"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.977389, 0.644053, 0.813305, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xyu85"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.957676, 0.222629, 0.222507, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmiix"]
+texture = ExtResource("3_nqgev")
+modulate_color = Color(0.788235, 0.345098, 0.423529, 1)
+
+[node name="Menu" type="Node2D"]
+position = Vector2(35, 25)
+script = ExtResource("1_re6hh")
+
+[node name="Play" type="Button" parent="."]
+clip_contents = true
+offset_left = 100.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 100.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("2_vj4sa")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxTexture_fy1rs")
+theme_override_styles/hover = SubResource("StyleBoxTexture_yi55l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_hsnsm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_i1en5")
+text = "PLAY"
+script = SubResource("GDScript_h1mnx")
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="Button" parent="."]
+clip_contents = true
+offset_left = 100.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 170.0
+theme_override_fonts/font = ExtResource("2_vj4sa")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxTexture_i780i")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lg2vm")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xyu85")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lmiix")
+text = "QUIT"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
