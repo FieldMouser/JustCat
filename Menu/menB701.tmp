@@ -1,13 +1,10 @@
-[gd_scene load_steps=24 format=3 uid="uid://2wlc12g3o7ya"]
+[gd_scene load_steps=14 format=3 uid="uid://2wlc12g3o7ya"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_re6hh"]
 [ext_resource type="Script" path="res://Menu/control.gd" id="2_ialjj"]
 [ext_resource type="FontFile" uid="uid://cufpjpj1j1gbu" path="res://Art/pixelFont-7-8x14-sproutLands.ttf" id="2_vj4sa"]
 [ext_resource type="Texture2D" uid="uid://dwh265gm6xhlo" path="res://Art/Sprout Lands - UI Pack - Basic pack/Sprite sheets/Dialouge UI/dialog box big.png" id="3_nqgev"]
-[ext_resource type="Script" path="res://Menu/camera_2d.gd" id="4_8qvr7"]
 [ext_resource type="PackedScene" uid="uid://bii8lnq7diy5q" path="res://Menu/BG.tscn" id="4_uhp41"]
-[ext_resource type="Texture2D" uid="uid://c70c0r56xny1d" path="res://Art/Characters/Basic Charakter Actions.png" id="7_5s4pn"]
-[ext_resource type="Script" path="res://Menu/animated_sprite_2d.gd" id="8_iu71k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fy1rs"]
 texture = ExtResource("3_nqgev")
@@ -41,82 +38,23 @@ modulate_color = Color(0.957676, 0.222629, 0.222507, 1)
 texture = ExtResource("3_nqgev")
 modulate_color = Color(0.788235, 0.345098, 0.423529, 1)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4md2g"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(0, 432, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ly4fx"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(48, 432, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vmgip"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(0, 480, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_a4gn8"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(48, 480, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4ue1u"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(0, 528, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tpcld"]
-atlas = ExtResource("7_5s4pn")
-region = Rect2(48, 528, 48, 48)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ygsh2"]
-animations = [{
-"frames": [{
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_4md2g")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_ly4fx")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_vmgip")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_a4gn8")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_4ue1u")
-}, {
-"duration": 3.0,
-"texture": SubResource("AtlasTexture_tpcld")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_re6hh")
 
 [node name="Bg" parent="." instance=ExtResource("4_uhp41")]
 position = Vector2(-2, -2)
 
-[node name="Control" type="Control" parent="Bg"]
+[node name="Control" type="Control" parent="."]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
-offset_left = 2.0
-offset_top = 2.0
-offset_right = 1902.0
-offset_bottom = 1082.0
+offset_right = 1900.0
+offset_bottom = 1080.0
 script = ExtResource("2_ialjj")
 
-[node name="Camera2D" type="Camera2D" parent="Bg/Control"]
-limit_left = 0
-limit_top = 0
-limit_right = 1900
-limit_bottom = 1080
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-script = ExtResource("4_8qvr7")
+[node name="Camera2D" type="Camera2D" parent="Control"]
 
-[node name="Play" type="Button" parent="Bg/Control"]
+[node name="Play" type="Button" parent="Control"]
 clip_contents = true
 layout_mode = 0
 offset_left = 150.0
@@ -133,7 +71,7 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_hsnsm")
 theme_override_styles/normal = SubResource("StyleBoxTexture_i1en5")
 text = "PLAY"
 
-[node name="Quit" type="Button" parent="Bg/Control"]
+[node name="Quit" type="Button" parent="Control"]
 clip_contents = true
 layout_mode = 0
 offset_left = 150.0
@@ -148,12 +86,5 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_xyu85")
 theme_override_styles/normal = SubResource("StyleBoxTexture_lmiix")
 text = "QUIT"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(57, 1001)
-sprite_frames = SubResource("SpriteFrames_ygsh2")
-frame_progress = 0.237562
-offset = Vector2(40, 0)
-script = ExtResource("8_iu71k")
-
-[connection signal="pressed" from="Bg/Control/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Bg/Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

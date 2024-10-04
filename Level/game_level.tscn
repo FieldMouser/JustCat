@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dpkrhxeeo15pu" path="res://Art/Tilesets/Grass.png" id="3_tqow6"]
 [ext_resource type="PackedScene" uid="uid://b58x474156q6r" path="res://Characters/apple_tree.tscn" id="4_4bnac"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pwnmt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngfta"]
 texture = ExtResource("2_77q8u")
 3:0/0 = 0
 4:0/0 = 0
@@ -75,7 +75,7 @@ texture = ExtResource("2_77q8u")
 0:1/0 = 0
 0:2/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hvbwt"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bia6n"]
 texture = ExtResource("3_tqow6")
 0:0/0 = 0
 1:0/0 = 0
@@ -150,8 +150,8 @@ texture = ExtResource("3_tqow6")
 8:6/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_mk5dy"]
-sources/1 = SubResource("TileSetAtlasSource_pwnmt")
-sources/2 = SubResource("TileSetAtlasSource_hvbwt")
+sources/1 = SubResource("TileSetAtlasSource_ngfta")
+sources/2 = SubResource("TileSetAtlasSource_bia6n")
 
 [node name="Node2D" type="Node2D"]
 

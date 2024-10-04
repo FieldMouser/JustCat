@@ -1,2 +1,7 @@
-res://menu.tscn
+res://Menu/menu.tscn
+res://Menu/camera_2d.gd
 res://Level/game_level.tscn
+res://Menu/BG.tscn
+res://Menu/bg.gd
+res://Menu/animated_sprite_2d.gd
+res://Menu/tile_map.gd
